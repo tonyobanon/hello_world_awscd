@@ -5,5 +5,5 @@ deploy:
   access_key_id: AKIAJ5RL7WXLQ6SKAHQA
   secret_access_key: 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
   application: BlueGreenDemoApplication
-  deployment_group: BlueGreenDemoFleet-n0tpx0i
+  deployment_group: BlueGreenDemoFleet-n0tpx0z
   region: us-west-2
