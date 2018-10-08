@@ -1,0 +1,22 @@
+version: 0.1
+os: linux
+files:
+  - source: /
+    destination: /webapps/hello_world_awscd
+hooks:
+  BeforeInstall:
+    - location: scripts/InstallDependencies.sh
+      runas: root
+    - location: scripts/UnzipResourceBundle.sh
+    - location: scripts/UnzipDataBundle.sh
+  AfterInstall:
+    - location: scripts/RunResourceTests.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/RunFunctionalTests.sh
+      timeout: 3600
+    - location: scripts/StartApplication.sh
+  ValidateService:
+    - location: scripts/MonitorService.sh
+      timeout: 3600
+      runas: root
