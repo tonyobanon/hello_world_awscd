@@ -7,6 +7,11 @@ if hash npm 2>/dev/null; then
     else
 
         # Install Nodejs
-        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-        sudo apt-get install -y nodejs
+        # curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+        # sudo apt-get install -y nodejs
+
+        curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+        sudo yum -y install nodejs
+        sudo yum install gcc-c++ make
+
 fi
