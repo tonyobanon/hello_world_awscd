@@ -3,7 +3,7 @@
 
 
 if hash npm 2>/dev/null; then
-         echo "NodeJS is already installed" >> ${LOG_FILE}
+         echo "NodeJS is already installed"
     else
 
         # Install Nodejs
@@ -13,5 +13,7 @@ if hash npm 2>/dev/null; then
         curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
         sudo yum -y install nodejs
         sudo yum -y install gcc-c++ make
+
+        echo "NodeJS is now installed"
 
 fi
