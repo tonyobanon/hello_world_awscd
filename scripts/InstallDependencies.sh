@@ -12,6 +12,6 @@ if hash npm 2>/dev/null; then
 
         curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
         sudo yum -y install nodejs
-        sudo yum install gcc-c++ make
+        sudo yum -y install gcc-c++ make
 
 fi
