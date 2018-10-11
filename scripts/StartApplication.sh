@@ -9,5 +9,5 @@ cd /webapps/hello_world_awscd
 npm install -g forever
 npm install
 
-#npm start
+# npm start 80
 forever start server.js 80 &

@@ -4,8 +4,7 @@ const Hapi=require('hapi');
 
 // Create a server with a host and port
 const server=Hapi.server({
-    host:'localhost',
-    port:8000
+    port: process.argv[2]
 });
 
 // Add the route
